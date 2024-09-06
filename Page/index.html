@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="scroll.css">
 </head>
 <body>
+  <header>
     <nav class="bg-no-repeat bg-cover fixed top-0 left-0 w-full" style="background-image: url('/image/1.jpg');">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex h-16 items-center justify-between">
@@ -68,6 +69,7 @@
              
           </div>
       </nav>
+    </header>
       <main class="mt-24 bg-no-repeat bg-cover" style="background-image: url('/image/1.jpg');">
         <section id="About" class="p-5 flex-auto">
             <div class="p-0">
@@ -76,19 +78,23 @@
               
             <div class="grid grid-cols-1 sm:grid-cols-2 lg: gap-6">
 
-                <div class="relative bg-gray-700 bg-opacity-45 rounded-lg shadow-md p-6 border border-purple-800">
+                <div class="bg-gray-700 bg-opacity-45 rounded-lg shadow-md p-6 border border-purple-800">
                     <h2 class="text-xl font-semibold text-gray-300 mb-4">ME</h2>
-                
+                    
+                    <button class="bg-purple-800 text-white px-4 py-2 rounded-md" onclick="openModal()">SELECT *FROM NIKO</button>
+                   
+                    <div id="modal" class="inset-0 bg-opacity-75 items-end justify-center hidden">
+                      <!-- Modal Content -->
+                      <div class="mt-2 p-2 rounded-lg shadow-lg max-w-sm w-full">
+                        <p class="font-serif font-semibold text-gray-300 mb-2">
+                          I am Niko R. Polistico<br>
+                          20 years of age<br>
+                        </p>
+                      </div>
+                    </div>
+
                     <img class="w-30 max-h-80 object-cover mt-10 rounded-lg 
                     transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" src="/image/3.jpg" alt="">
-                    <h5 class="absolute left-96 top-28 text-gray-300">
-                    <span>Name: I am Niko R. Polistico</span><br><br>
-                    <span>Age: 21</span><br><br>
-                    <span>Address: Mahay Butuan City</span><br><br>
-                    <span>Gender: Male</span><br><br>
-                    <span>Status: Single</span><br><br>
-                    <span>Cotact No: 09675695166</span>
-                </h5>
                 </div>
 
                 <div class="bg-gray-700 bg-opacity-45 rounded-lg shadow-md p-6 border border-purple-800">
@@ -187,6 +193,14 @@
               </div>
             </div>
           </footer>  
-          <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>      
+          <script>
+            function openModal() {
+              const modal = document.getElementById('modal');
+              modal.classList.toggle('hidden');
+            }
+          
+          </script>
+          <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>  
+              
 </body>
 </html>
